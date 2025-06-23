@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Segitiga</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Kalkulator Segitiga</h1>
+    <p>Pilih jenis perhitungan dan isi data yang diperlukan:</p>
+
+    <div class="mode">
+      <label><input type="radio" name="mode" value="luas" checked /> Luas</label>
+      <label><input type="radio" name="mode" value="keliling" /> Keliling</label>
+    </div>
+
+    <form id="triangleForm">
+      <!-- Input Luas -->
+      <div class="input-group" id="inputLuas">
+        <div class="row">
+          <div class="field">
+            <label for="alas">Alas (cm)</label>
+            <input type="number" id="alas" name="alas" min="0.1" step="any" />
+          </div>
+          <div class="field">
+            <label for="tinggi">Tinggi (cm)</label>
+            <input type="number" id="tinggi" name="tinggi" min="0.1" step="any" />
+          </div>
+        </div>
+        <p class="rumus">Rumus: Luas = ½ × alas × tinggi</p>
+      </div>
+
+      <!-- Input Keliling -->
+      <div class="input-group" id="inputKeliling" style="display: none;">
+        <div class="row">
+          <div class="field">
+            <label for="sisi1">Sisi A (cm)</label>
+            <input type="number" id="sisi1" name="sisi1" min="0.1" step="any" />
+          </div>
+          <div class="field">
+            <label for="sisi2">Sisi B (cm)</label>
+            <input type="number" id="sisi2" name="sisi2" min="0.1" step="any" />
+          </div>
+          <div class="field">
+            <label for="sisi3">Sisi C (cm)</label>
+            <input type="number" id="sisi3" name="sisi3" min="0.1" step="any" />
+          </div>
+        </div>
+        <p class="rumus">Rumus: Keliling = sisi A + sisi B + sisi C</p>
+      </div>
+
+      <button type="submit">Hitung</button>
+    </form>
+
+    <div id="hasil"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
